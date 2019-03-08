@@ -8,8 +8,9 @@ import java.util.Comparator;
  * 
  * @author Andy Osorio, Thomas Lawless, James Moran, SCCC Spring 2019
  */
-public abstract class PersonComparator implements Comparator{
+public class PersonComparator implements Comparator<Person>{
 
+    @Override
     public int compare(Person p1, Person p2) {
         int lastDiff = p1.getLastName().charAt(0) - p2.getLastName().charAt(0);
         int firstDiff = p1.getFirstName().charAt(0) - p2.getFirstName().charAt(0);
